@@ -1,0 +1,147 @@
+.wrapper {
+    max-width: 46rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formWrapper {
+    width: 100%;
+    margin-top: calc(0px - 2rem - 1rem - 0.75rem ); /* 2rem de margin 1px de border + 1rem de padding 0.2 de line*/
+}
+
+.formWrapper form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formWrapper input {
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 36rem;
+    margin-right: 1rem;
+    line-height: 1.4;
+    color: var(--gray-100);
+}
+
+.formWrapper button {
+    background: var(--blue-dark);
+    border-radius: 8px;
+    color: var(--gray-100);
+    border: 0;
+    padding: 1rem;
+    
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 0.875rem;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.formWrapper button:not(:disabled):hover {
+    background: var(--blue);
+}
+
+.formWrapper button svg {
+    margin-left: 0.5rem;
+}
+
+.formWrapper button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.tasksListWrapper {
+    width: 100%;
+    margin-top: 4rem;
+    
+}
+
+.tasksInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    
+    
+}
+
+.tasksInfo div {
+    display: flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.tasksInfo div:first-child{
+    color: var(--blue);
+}
+
+.tasksInfo div:last-child{
+    color: var(--purple);
+}
+
+
+.tasksInfo div span {
+    background: var(--gray-400);
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--gray-200);
+    padding: 2px 8px;
+    border-radius: 1rem;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem;
+
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: var(--gray-300);
+    line-height: 1.4;
+
+    border-top: 1px solid var(--gray-400);
+
+}
+
+.taskList > p:last-child {
+    font-weight: 400;
+}
+
+.taskList img {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+
+    .wrapper {
+        width: 80%;
+    }
+
+    .formWrapper input {
+        width: 14.5rem;
+        margin-right: 0;
+    }
+
+    .tasksListWrapper {
+        width: 100%
+    }
+}
